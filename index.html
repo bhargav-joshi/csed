@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>C-Sed</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="assets/js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+              [{b:500,d:1000,x:0,e:{x:6}}],
+              [{b:-1,d:1,x:100,p:{x:{d:1,dO:9}}},{b:0,d:2000,x:0,e:{x:6},p:{x:{dl:0.1}}}],
+              [{b:-1,d:1,x:200,p:{x:{d:1,dO:9}}},{b:0,d:2000,x:0,e:{x:6},p:{x:{dl:0.1}}}],
+              [{b:-1,d:1,rX:20,rY:90},{b:0,d:4000,rX:0,e:{rX:1}}],
+              [{b:-1,d:1,rY:-20},{b:0,d:4000,rY:-90,e:{rY:7}}],
+              [{b:-1,d:1,sX:2,sY:2},{b:1000,d:3000,sX:1,sY:1,e:{sX:1,sY:1}}],
+              [{b:-1,d:1,sX:2,sY:2},{b:1000,d:5000,sX:1,sY:1,e:{sX:3,sY:3}}],
+              [{b:-1,d:1,tZ:300},{b:0,d:2000,o:1},{b:3500,d:3500,tZ:0,e:{tZ:1}}],
+              [{b:-1,d:1,x:20,p:{x:{o:33,r:0.5}}},{b:0,d:1000,x:0,o:0.5,e:{x:3,o:1},p:{x:{dl:0.05,o:33},o:{dl:0.02,o:68,rd:2}}},{b:1000,d:1000,o:1,e:{o:1},p:{o:{dl:0.05,o:68,rd:2}}}],
+              [{b:-1,d:1,da:[0,700]},{b:0,d:600,da:[700,700],e:{da:1}}],
+              [{b:600,d:1000,o:0.4}],
+              [{b:-1,d:1,da:[0,400]},{b:200,d:600,da:[400,400],e:{da:1}}],
+              [{b:800,d:1000,o:0.4}],
+              [{b:-1,d:1,sX:1.1,sY:1.1},{b:0,d:1600,o:1},{b:1600,d:5000,sX:0.9,sY:0.9,e:{sX:1,sY:1}}],
+              [{b:0,d:1000,o:1,p:{o:{o:4}}}],
+              [{b:1000,d:1000,o:1,p:{o:{o:4}}}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 16,
+                $SpacingY: 16
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&subset=latin-ext,cyrillic-ext,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <style>
+        /*jssor slider loading skin double-tail-spin css*/
+        .jssorl-004-double-tail-spin img {
+            animation-name: jssorl-004-double-tail-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-004-double-tail-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 031 css*/
+        .jssorb031 {position:absolute;}
+        .jssorb031 .i {position:absolute;cursor:pointer;}
+        .jssorb031 .i .b {fill:#000;fill-opacity:0.6;stroke:#fff;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.8;}
+        .jssorb031 .i:hover .b {fill:#fff;fill-opacity:1;stroke:#000;stroke-opacity:1;}
+        .jssorb031 .iav .b {fill:#fff;stroke:#000;stroke-width:1600;fill-opacity:.6;}
+        .jssorb031 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 051 css*/
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+    </style>
+  
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <div class="logo">
+        <!-- <h1><a href="index.html">C-Sed</a></h1> -->
+        <a href="index.html"><img src="assets/img/logo.png" ></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Stories</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Events</a></li>
+          <li><a class="nav-link scrollto" href="#">Testimonials</a></li>
+           <li><a class="nav-link scrollto" href="#">Careers</a></li>
+          <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">About C-sed</a></li>
+              <li><a href="#">Our Team </a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="login.html">Sign In/Up</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+      
+         <div id="jssor_1" style="position:relative;margin:10 auto;top:82px;left:0px;width:1300px;height:650px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-004-double-tail-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:600px;overflow:hidden;">
+            <div style="background-color:#000000;">
+                <img data-u="image" src="assets/img/banner-1.jpg" />
+                <div data-ts="flat" data-p="320" style="left:144px;top:80px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="0" style="left:550px;top:0px;width:550px;height:90px;position:absolute;overflow:hidden;">
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-arr="1" style="left:20px;top:18px;width:200px;height:20px;position:absolute;color:#edf1f2;font-size:16px;font-weight:700;line-height:1.2;letter-spacing:0.1em;"></div>
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-arr="2" style="left:19px;top:36px;width:600px;height:30px;position:absolute;color:#edf1f2;font-size:24px;line-height:1.2;letter-spacing:0.05em;"><span style="font-weight:900;color:#e04338;"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="assets/img/banner-2.jpg" />
+                <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:1300px;height:600px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="3" style="left:400px;top:-30px;width:500px;height:400px;position:absolute;">
+                        <div data-to="50% 50%" data-ts="preserve-3d" data-t="4" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                            <div data-to="50% 50%" data-ts="preserve-3d" data-t="5" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
+                                    <div data-to="50% 50%" data-t="7" style="left:-50px;top:175px;width:600px;height:38px;position:absolute;opacity:0;color:#00a186;font-size:32px;font-weight:700;line-height:1.2;text-align:center;">Join Us</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="assets/img/banner-4.jpg" />
+                <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:1300px;height:600px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-arr="8" style="left:-2px;top:20px;width:1000px;height:20px;position:absolute;opacity:0;color:#0ff2f2;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.2;letter-spacing:1.3em;text-align:center;"></div>
+                </div>
+            </div>
+            <div>
+                <img data-u="image" src="assets/img/banner-1.jpg" />
+                
+            </div>
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;"></a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:13px;height:13px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
+    <!-- #endregion Jssor Slider End -->
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+     
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <b>
+              At C-SED we offer top of the line learning and training services which are aimed at providing expert mentors and coaches to make your career concerns diminish. We aim to LESSEN THE BASIC CONFUSION among parents and students.
+            </b>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <i>
+              At C-SED we offer top of the line learning and training services which are aimed at providing expert mentors and coaches to make your career concerns diminish. We aim to LESSEN THE BASIC CONFUSION among parents and students.
+            </i>
+          </div>
+        </div>
+        <br>
+          <div class="section-title" data-aos="zoom-out">
+          <h2>About</h2>
+          <p>Who we are</p>
+          </div>
+         <div class="col-lg-12 pt-4 pt-lg-0">
+            <h5>
+              C-SED stands for Centre for Social Entrepreneurship Development. It is a unique initiative of ESTAH and completely focuses on nurturing social entrepreneurs from the rural and semi-urban background by identifying their business ideas. ESTAH, which is the parent organisation of C-SED is involved in rural empowerment and upliftment of backward classes of the society.
+            </h5>
+          </div>
+
+      <br> <br>
+      <div class="section-title" data-aos="zoom-out">
+          <h2></h2>
+          <p>What We Do?</p>
+           </div>
+
+                   <div class="tab-content" data-aos="fade-up">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <p>
+                  C-SED ideally deals with the PEOPLE part of ESTAH community that helps us attain the efficiency in various categories through the following services.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/what-we-do.jpg" alt="" class="img-fluid" width="300">
+              </div>
+            </div>
+          </div>
+          </div>
+
+             <div class="row clearfix">
+              <div class="col-lg-5 Overview-img">
+                <img src="http://www.c-sed.org/images/ov2.jpg" width="400px">
+              </div>
+              <div class="col-lg-7 para">
+                <div class="heading-block noborder bottommargin-xs">
+                  <h1>C-SED Overview</h1>
+                </div>
+                <p class="bottommargin-xs">C-SED has multiple facets with all the necessary facilities/skills needed to assist aspiring social entrepreneurs, right from business idea development, proposal development, sales and marketing support, funding and investments, office setup and other aspects that are a must for a startup. Hence, C-SED is a one-stop solution to all entrepreneurial needs of a social entrepreneur.</p>
+  
+                <p class="bottommargin-xs">We have a unique way of identifying the future mentors, volunteers, coaches and social entrepreneurs and nurturing them into valuable assets at C-SED. We work on the principle of 3AAA (Appreciate, Award, Add Value).</p>
+            </div>
+          </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= 3AAA Section ======= -->
+<section id="about2" class="services">
+  <div class="container"> 
+  <div class="section-title" data-aos="zoom-out">
+      <h2></h2>
+      <p>C-SED’s Services</p>
+      </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+            <center><img src="assets/img/workshop.png"><br>
+            <h4><b>WORKSHOPS</b></h4>
+              <p class="description">Providing individual guidance systems through our team of experts and scheduling sessions for inclusive and futuristic skill development.</p></center>
+              </h4>  
+            
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+              <center><img src="assets/img/training.png"><br>
+                <h4><b>TRAININGS</b></h4>
+              <p class="description">Here we help ideas and skills to take a more professional shape creating a community of creative workflow to carry on individual businesses as well as providing internships to young minds.</p></center>
+              </h4>  
+              </h4>  
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+              <center><img src="assets/img/dev.png"><br>
+              <h4><b>FACULTY DEVLEOPMENT</b></h4>
+              <p class="description">Through our group of experts, we are dedicated to create a team of expert faculty who in turn are available for further training and development of the fresh recruits</p></center>
+              </h4>  
+              </h4>  
+            </div>
+          </div>
+
+      </div>
+      </section>
+    </section>
+
+
+    <section class="counters">
+			<div class="container">
+				<div>
+					<div class="counter" data-target="150">0</div>
+					<h3>Subscribers</h3>
+				</div>
+				<div>
+					<div class="counter" data-target="20">0</div>
+					<h3>Partners & Co-branding</h3>
+				</div>
+				<div>
+					<div class="counter" data-target="40">0</div>
+					<h3>Mentors & Coachers</h3>
+				</div>
+				<div>
+					<div class="counter" data-target="200">0</div>
+					<h3>Interns</h3>
+				</div>
+			</div>
+		</section>
+
+<!-- ======= 3AAA Section ======= -->
+<section id="about2" class="services">
+  <div class="container"> 
+  <div class="section-title" data-aos="zoom-out">
+      <h2></h2>
+      <p>C-SED’s 3AAA Approach</p>
+      </div>
+      <p>We follow the 3AAA (Appreciate, Award and Add Value) approach in selecting the potential entrepreneurs. Through our procedures, we identify their business ideas and their application to businesses. We make them meet the right kind of people who will take their business ideas forward to make them successful social entrepreneurs.</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+            <center><img src="assets/img/icon-3.jpg"><br>
+            <h4><b>Appreciate</b></h4>
+              <p class="description">Appreciating social entrepreneurs for their effort and dedication towards creating their own enterprises.</p></center>
+              </h4>  
+            
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+              <center><img src="assets/img/icon-1.jpg"><br>
+                <h4><b>Award</b></h4>
+              <p class="description">Awarding the selected entrepreneurs by supporting them throughout for launching their business viz. funding, infrastructure, online presence, sales and marketing support.</p></center>
+              </h4>  
+              </h4>  
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+              <center><img src="assets/img/icon-2.jpg"><br>
+              <h4><b>Add value</b></h4>
+              <p class="description">C-SED adds value to the journey of social entrepreneurs by providing access to a strong interdependent ecosystem that will guarantee their business success.</p></center>
+              </h4>  
+              </h4>  
+            </div>
+          </div>
+
+      </div>
+      </section>
+    </section>
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3" data-aos="zoom-in">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+              <i class="ri-gps-line"></i>
+              <h4 class="d-none d-lg-block">Join First</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+              <i class="ri-body-scan-line"></i>
+              <h4 class="d-none d-lg-block">Learn Live</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+              <i class="ri-sun-line"></i>
+              <h4 class="d-none d-lg-block">Think on Idea</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+              <i class="ri-store-line"></i>
+              <h4 class="d-none d-lg-block">Build your project</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>You just have to register first.</h3>
+                <p class="fst-italic">
+                  Description text
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Live Recorded classes</li>
+                  <li><i class="ri-check-double-line"></i> Q n A Live with Mentors & Industry Expert</li>
+                  <li><i class="ri-check-double-line"></i> Hand's on Project & Live Projects and Experience</li>
+                </ul>
+                <p>
+                  More Details
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-1.png" alt="" class="img-fluid" width="500">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Learn Live</h3>
+                <p>
+                  Description text
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Live Recorded classes</li>
+                  <li><i class="ri-check-double-line"></i> Q n A Live with Mentors & Industry Expert</li>
+                  <li><i class="ri-check-double-line"></i> Hand's on Project & Live Projects and Experience</li>
+                </ul>
+                <p class="fst-italic">
+                  More Details
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-2.png" alt="" class="img-fluid" width="500">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Think on a Idea !!</h3>
+                <p>
+                  Description text
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Live Recorded classes</li>
+                  <li><i class="ri-check-double-line"></i> Q n A Live with Mentors & Industry Expert</li>
+                  <li><i class="ri-check-double-line"></i> Hand's on Project & Live Projects and Experience</li>
+                </ul>
+                <p class="fst-italic">
+                  More Details
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-3.png" alt="" class="img-fluid" width="500">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Build Some Cool Projects !!</h3>
+                <p>
+                  Description text
+                </p>
+                <ul>
+                  <li><i class="ri-check-double-line"></i> Live Recorded classes</li>
+                  <li><i class="ri-check-double-line"></i> Q n A Live with Mentors & Industry Expert</li>
+                  <li><i class="ri-check-double-line"></i> Hand's on Project & Live Projects and Experience</li>
+                </ul>
+                <p class="fst-italic">
+                  More Details
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-4.png" alt="" class="img-fluid" width="500">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-out">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Have Any Queries ?</h3>
+            <p> Call us to get them solved <img src="assets/img/check.gif"></p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call Now</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    
+
+    <!-- ======= team Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Faculty</h2>
+          <p>Our Hardworking Faculty</p>
+        </div>
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/1.jpg" class="testimonial-img" alt="">
+                <h3>Santosh Dagur</h3>
+              </div>
+            </div><!-- End team item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/2.jpg" class="testimonial-img" alt="">
+                <h3>Ram Kumar</h3>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/4.jpg" class="testimonial-img" alt="">
+                <h3>Manikandan Thekkepat</h3>
+              </div>
+            </div><!-- End team item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/6.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+              </div>
+            </div><!-- End team item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/7.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/8.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/9.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/10.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/11.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/12.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/13.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/15.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/16.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/17.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/18.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/19.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/20.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/21.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/22.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/23.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/24.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/25.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/26.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/27.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/28.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/faculty/29.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+              </div>
+            </div><!-- End team item -->
+            
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Banglore, Karnataka </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>bhargav@c-sed.org</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9881 87 2028</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>C-sed</h3>
+      <p>Making Entreprenurs </p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>C-sed</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">Bhargav & Tech Team Estah Society </a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
