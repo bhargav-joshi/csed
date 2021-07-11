@@ -8,3 +8,20 @@ It is a unique initiative of ESTAH and completely focuses on nurturing social en
 `Bootstrap`
 `jQuery`
 `tawk.to Chat Widget`
+
+## Pages 
+- Home
+- Stories 
+- Events
+- Testimonials 
+- Careers 
+- About us
+- Our Team
+- Sign in / Sign up Panel
+- Join as Startup Page
+- Join as Investor Page
+- Join as Mentor Page
+
+
+***Designed & Developed by Bhargav Joshi***
+ 
